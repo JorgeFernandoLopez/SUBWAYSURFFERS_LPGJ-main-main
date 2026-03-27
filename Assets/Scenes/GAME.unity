@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &33257312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33257313}
+  - component: {fileID: 33257314}
+  m_Layer: 0
+  m_Name: InstantiateFlyingPlatform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &33257313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33257312}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.80364, y: 0, z: -25.23064}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 197888422}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &33257314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33257312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541094fa459425e4d94d9a047f39b8c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InstantiatePoolObjects
+  prefab: {fileID: 8096606628430563601, guid: 177c3b98622b5fe4cadccab5d1effed0, type: 3}
 --- !u!1 &87885859
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +326,22 @@ MonoBehaviour:
   obstacleTag: Obstacle
   coinTag: Coin
   jumpPowerUpTag: JumpPowerUp
+  jetpackTag: JetPack
+  onJetpackCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1893955836}
+        m_TargetAssemblyTypeName: JetPackPowerUp, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onMagnetCollected:
     m_PersistentCalls:
       m_Calls:
@@ -500,6 +561,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 604312712}
+  - {fileID: 33257313}
   - {fileID: 2090084580}
   - {fileID: 1079148634}
   - {fileID: 1074065672}
@@ -1217,7 +1279,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 329868417}
+    m_TransformParent: {fileID: 1018009200}
     m_Modifications:
     - target: {fileID: 1741693452841693106, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_Intensity
@@ -1229,43 +1291,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.37244
+      value: 0.021786615
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.37244
+      value: 0.021786613
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.37244
+      value: 0.021786615
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.042
+      value: -0.0017315184
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.186
+      value: -0.004211787
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.247
+      value: -0.0027059747
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.020636855
+      value: 0.9998671
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 2.1146149e-11
+      value: 9.388875e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9997871
+      value: 0.016303344
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 9.3130853e-10
+      value: -3.7862505e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2492,12 +2554,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4c6aee118c794204fba4ca614c07f584, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 593511913}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c6aee118c794204fba4ca614c07f584, type: 3}
 --- !u!4 &1018009200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4c6aee118c794204fba4ca614c07f584, type: 3}
+  m_PrefabInstance: {fileID: 1018009199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1018009201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c6aee118c794204fba4ca614c07f584, type: 3}
   m_PrefabInstance: {fileID: 1018009199}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1024232166
@@ -2547,8 +2617,9 @@ MonoBehaviour:
   minPLatformsNumber: 5
   maxPlatformsNUmber: 7
   powerUpPools:
-  - {fileID: 722929211}
   - {fileID: 2026484935}
+  - {fileID: 722929211}
+  - {fileID: 1145501195}
   powerUpOffset: 2
 --- !u!1 &1074065670
 GameObject:
@@ -2728,6 +2799,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 939456948}
         m_TargetAssemblyTypeName: MagnetPowerUp, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Penguin_song
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1893955836}
+        m_TargetAssemblyTypeName: JetPackPowerUp, Assembly-CSharp
         m_MethodName: Deactivate
         m_Mode: 1
         m_Arguments:
@@ -2919,9 +3002,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 366175167995203695, guid: 9db7828d68c710644b7b412a8d139714, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1018009200}
-    - targetCorrespondingSourceObject: {fileID: 366175167995203695, guid: 9db7828d68c710644b7b412a8d139714, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 593511913}
     - targetCorrespondingSourceObject: {fileID: 1852576806548013000, guid: 9db7828d68c710644b7b412a8d139714, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1370244675}
@@ -4123,6 +4203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1893955835}
+  - component: {fileID: 1893955836}
   m_Layer: 0
   m_Name: JetPackPowerUp
   m_TagString: Untagged
@@ -4145,6 +4226,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1893955836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893955834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce30da37197ee0d4a940a5e70bb1e61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JetPackPowerUp
+  flyingHeight: 4.5
+  character: {fileID: 87885863}
+  jetpackAsset: {fileID: 1018009201}
+  flyDuration: 5
+  onJetpackActivated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1941662096}
+        m_TargetAssemblyTypeName: PlatformsManager, Assembly-CSharp
+        m_MethodName: InstantiateFlyingPlatform
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 87885860}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1941662095
 GameObject:
   m_ObjectHideFlags: 0
@@ -4185,6 +4297,9 @@ MonoBehaviour:
   securePlatformsPrefabs:
   - {fileID: 2090084579}
   - {fileID: 1079148633}
+  flyingPlatformPrefabs:
+  - {fileID: 33257314}
+  flyingPlatformHeight: 4.5
   initialPlatforms: 5
   minSpeed: 5
   maxSpeed: 12
