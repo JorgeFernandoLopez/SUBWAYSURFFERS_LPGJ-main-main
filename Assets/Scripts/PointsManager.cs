@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
-
-public class PointsManager : MonoBehaviour
+using UnityEngine.UI;
+ 
+public class Points : MonoBehaviour
 {
     private int points;
     [SerializeField]
@@ -10,6 +11,8 @@ public class PointsManager : MonoBehaviour
     [SerializeField]
     private UnityEvent<int> onPointsChanged;
     private Coroutine pointsCoroutine;
+    [SerializeField]
+    private Text [] pointsTexts;
     public void StartCounting()
     {
         points = 0;
@@ -33,6 +36,28 @@ public class PointsManager : MonoBehaviour
             onPointsChanged?.Invoke(points);
         }
     }
+    public void CalculateHighScore()
+    {
+        int highScore = PlayerPrefs.GetInt("HighScore",0);
+        if (points > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore",points);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            points = highScore;
+        }
+        UpdatePointsTexts();
+    }
+    private void UpdatePointsTexts()
+    {
+        foreach (var text in pointsTexts)
+        {
+           
+            text.text = points.ToString();
+        }
+    }
 }
-
-    
+ 
+ 
