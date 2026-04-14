@@ -5,7 +5,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField]
     private string pauseMenuOpenAnimation = "Show";
     [SerializeField]
-    private string pauseMenuCloseAnimation = "Show";
+    private string pauseMenuCloseAnimation = "Hide";
     [SerializeField]
     private Animator pauseMenuAnimator;
     private bool isPaused= false;
