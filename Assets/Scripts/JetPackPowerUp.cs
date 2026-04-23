@@ -29,6 +29,7 @@ public class JetPackPowerUp : MonoBehaviour
         onJetpackActivated?.Invoke();
         character.CharacterRigidbody.isKinematic = true;
         character.transform.DOMoveY(flyingHeight, 1f).SetEase(Ease.OutQuad);
+        character.CharacterAnimator.Play(character.CharacterData.flyAnimationName);
         flyCoroutine = StartCoroutine(DeactivateJetPack());
     }
     private IEnumerator DeactivateJetPack()

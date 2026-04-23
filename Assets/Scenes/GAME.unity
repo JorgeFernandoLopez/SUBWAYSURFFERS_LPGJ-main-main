@@ -423,10 +423,10 @@ MonoBehaviour:
   onCoinCollected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 799509263}
+      - m_Target: {fileID: 799509266}
         m_TargetAssemblyTypeName: InstantiatePoolObjects, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 0
+        m_MethodName: Initialize
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1090,7 +1090,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1056, y: 1719.1}
+  m_SizeDelta: {x: 1157.01, y: 1786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &298516460
 MonoBehaviour:
@@ -1979,7 +1979,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pause
+  m_Text: 'PausA
 
 '
 --- !u!222 &714820616
@@ -3107,8 +3107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf1c5198eb165484da95a812a1892cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpManager
-  minPLatformsNumber: 3
-  maxPlatformsNUmber: 10
+  minPLatformsNumber: 4
+  maxPlatformsNUmber: 12
   powerUpPools:
   - {fileID: 2026484935}
   - {fileID: 722929211}
@@ -3843,7 +3843,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1056, y: 1719.1}
+  m_SizeDelta: {x: 1173, y: 1893}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239608587
 MonoBehaviour:
@@ -4788,7 +4788,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b0e19c16aae182148bcb02080246cbde, type: 3}
-    m_FontSize: 181
+    m_FontSize: 137
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -4799,7 +4799,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Lose
+  m_Text: pERDISTE
 --- !u!222 &1689042408
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4878,6 +4878,7 @@ Transform:
   - {fileID: 939456947}
   - {fileID: 532664664}
   - {fileID: 722929210}
+  - {fileID: 1893955835}
   - {fileID: 2026484934}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5579,12 +5580,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893955834}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55666, y: -0, z: 5.92405}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.03807, y: 0, z: 0.11558962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1781930911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1893955836
 MonoBehaviour:
@@ -5667,10 +5668,10 @@ MonoBehaviour:
   - {fileID: 33257314}
   - {fileID: 2087051895}
   - {fileID: 853643435}
-  flyingPlatformHeight: 4.5
-  initialPlatforms: 5
-  minSpeed: 5
-  maxSpeed: 12
+  flyingPlatformHeight: 4
+  initialPlatforms: 10
+  minSpeed: 6
+  maxSpeed: 8
   acceleration: 0.1
   onPlatformPassed:
     m_PersistentCalls:
@@ -6202,6 +6203,5 @@ SceneRoots:
   - {fileID: 197888422}
   - {fileID: 319335785}
   - {fileID: 1781930911}
-  - {fileID: 1893955835}
   - {fileID: 1571984613}
   - {fileID: 631418089}
